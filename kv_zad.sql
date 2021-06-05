@@ -83,25 +83,25 @@ hlace varchar(41) not null
 alter table cura add foreign key (punac) references punac(sifra);
 alter table sestra_svekar add foreign key (svekar) references svekar(sifra);
 alter table sestra_svekar add foreign key (sestra) references sestra(sifra);
-alter table zena add foreign key (sestra ) references sestra(sifra);
+alter table zena add foreign key (sestra) references sestra(sifra);
 alter table muskarac add foreign key (zena) references zena(sifra);
-alter table mladic add foreign key (muskarac ) references muskarac(sifra);
+alter table mladic add foreign key (muskarac) references muskarac(sifra);
 
 
-insert into sestra (haljina ,hlace ,narukvica ) values
+insert into sestra (haljina ,hlace ,narukvica) values
 ('crna','plava',1),
 ('plava','crna',2),
 ('crna','crvena',3);
 
-insert into zena (kratkamajica ,jmbag ,bojaociju ,sestra ) values
+insert into zena (kratkamajica ,jmbag ,bojaociju ,sestra) values
 ('crna',12345678910,'plava',1),
 ('crna',12345678911,'plava',2),
 ('crna',12345678912,'plava',3);
-insert into muskarac(bojaociju ,maraka ,zena ) values
+insert into muskarac(bojaociju ,maraka ,zena) values
 ('crna',123.20,1),
 ('crna',123.20,2),
 ('crna',123.20,3);
-insert into svekar (bojaociju ) values
+insert into svekar (bojaociju) values
 ('plava'),
 ('plava'),
 ('plava');
